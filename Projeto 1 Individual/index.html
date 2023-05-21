@@ -13,15 +13,19 @@
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+    
     <header>
         <nav>
-            <a href="">Sobre Mim</a>
-            <a href="">Interesses</a>
-            <a href="">Contato</a>
+            <a href="#sobremim">Sobre Mim</a>
+            <a href="#interesses">Interesses</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
+    
     <main>
+        
         <section class="sec-one">
             <div class="first-div">
                 <h2>Charlie G. Pencal</h2>
@@ -32,34 +36,53 @@
                 <img class="foto" src="./Charlie.png" alt="Foto de um rapaz que se diz o Charlie">
             </div>
         </section>
-        <section class="sec-two">
+        
+        <section id="sobremim" class="sec-two">
+            <div>
                 <h3>
                 Sobre Mim
                 </h3>
-                <p>Meu nome é Charlie. Estou quase formado em Produção Cênica, porém já transicionando para a área da Programação pela Resília com auxilio da EBANX. </p>
+            </div>
+            <div>
+                <p>Meu nome é Charlie. Estou quase formado em Produção Cênica, porém já transicionando para a área da Programação pela Resília com auxilio da EBANX. 
+                </p>
+            </div>
         </section>
-        <section>
-            <h3>
+        
+        <section id="interesses" class="sec-three">
+            <div class="inter">
+                <h3>
                 Interesses
-            </h3>
-            <p>
-                Games, danças urbanas, assistir anime, design, livros e artesanato.
-            </p>
+                </h3>
+            </div>
+            <div>
+                <ul>
+                    <li>Games</li>
+                    <li>Design</li>
+                    <li>Danças Urbanas</li>
+                    <li>Livros</li>
+                    <li>Anime</li>
+                    <li>Artesanato</li>
+                </ul>
+            </div>    
         </section>
-        <section>
+        
+        <section id="contato" class="sec-four">
             <h3>
                 Contato
             </h3>
+            
             <fieldset>
                 <label for="nome">Nome</label>
                 <input type="text" id="eome" name="nome">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email">
-                <label for="mensagem"></label>
-                <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" cols="70" rows="10"></textarea>
             </fieldset>
         </section>
     </main>
+   
     <footer>
         
     </footer>

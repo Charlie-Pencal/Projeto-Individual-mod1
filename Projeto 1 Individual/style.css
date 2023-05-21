@@ -18,11 +18,13 @@ nav {
 a {
     font-size: 30px;
     color: #fdfffc;
-    opacity: 50%;
+    opacity: 30%;
     text-decoration: none;
+    text-shadow: 0 0 5px #fdfffc;
 }
 a:hover {
     opacity: 100%;
+    transition: opacity 0.5s;
 }
 /*MAIN ---------------------*/
 main {
@@ -41,7 +43,7 @@ main {
 }
 h2 {
     font-family: 'Nova Mono', monospace;
-    font-size: 60px;
+    font-size: 70px;
     color: #fea837;
 }
 p {
@@ -58,5 +60,76 @@ height: 100%;}
 
 /*segunda seção --------------------*/
 .sec-two {background-color: #352f4c;
-    height: 50vh;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.sec-two > div {
+    width: 50vw;
+}
+h3 {
+    font-family: 'Nova Mono', monospace;
+    font-size: 70px;
+    color: #fea837;
+}
+
+/*terceira seção --------------------*/
+.sec-three {background-color: #352f4c;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.inter {background-image: url(background.png);
+    background-size: cover;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul {
+    font-size: 25px;
+    color: #fdfffc;
+    list-style: none;
+}
+label {
+    font-size: 20px;
+    color: #fdfffc;
+}
+input, textarea {background: none;
+    border: 2px solid #fdfffc;
+    border-radius: 10px;
+    width: 40vw;
+    color: #fdfffc;
+    font-size: 15px;
+    padding: 10px;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    gap: 10px;
+    padding-bottom: 10%;
+}
+/*quarta seção --------------------*/
+.sec-four {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    height: 10vh;
+    width: 100vw;
 }
