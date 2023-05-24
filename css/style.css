@@ -4,6 +4,7 @@ body {
 html {
     scroll-behavior: smooth;
 }
+/*Usei scroll-behavior para a troca pelas ancoras não ficar tão seca*/
 
 /*HEADER ---------------------*/
 header {
@@ -16,18 +17,20 @@ header {
     justify-content: space-around;
     align-items: center;
 }
+/* Header em flex para ficar alinhado na horizontal o h1 com a navegação, fixed para que ele role junto com a pagina para não precisar voltar para passar pra proxima seção, backdrop-filter blur e não um background por achar que ele transparente vai ficar melhor com as outras seções*/
 h1 {
     font-family: 'Nova Mono', monospace;
     font-size: 40px;
     color: #fea837;
 }
 nav {
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+/*display flex para alinhar tudo na vertical, porém com quebra para baixo caso seja visto por uma tela um pouco menor*/
 a {
     font-size: 30px;
     color: #fdfffc;
@@ -44,6 +47,8 @@ a:active {
     transition: color 0.1s;
     text-shadow: 0 0 5px #fea837;
 }
+/* Reduzi a opacidade da font para que quando o mouse pare em cima dela ela fique mais visivel e ao clicar ela fica amarela, também coloquei transiçoes para não ficar uma mudança drastica. */
+
 /*MAIN ---------------------*/
 main {
     display: flex;
@@ -51,7 +56,9 @@ main {
     justify-content: center;
     align-items: center;
 }
-/*primeira seção --------------------*/
+/*Coloquei um displey flex no body para ele ficar todo alinhado na vertical*/
+
+/*PRIMEIRA SEÇÃO --------------------*/
 .sec-one {
     margin-top: 15vh;
     height: 85vh;
@@ -59,6 +66,7 @@ main {
     flex-direction: row;
     justify-content: center;
 }
+/*Na primeira seção coloquei o tamanho para aparecer em tela quase inteira usando o vh pois eu gosto da estética*/
 h2 {
     font-family: 'Nova Mono', monospace;
     font-size: 70px;
@@ -70,13 +78,17 @@ p {
 }
 .first-div {
     padding-top: 15%;
-    padding-left: 20px;
-    width: 40%;
+    padding-left: 30px;
+    width: 50vw;
 }
-.foto {width: 100%;
+/*Coloquei uma div para ajustar o tamanho do quadro onde estaria o texto e ajudar a ajustar a imagem ao lado. e usei a class de baixo para ajustar o tamanho da imagem*/
+.foto {width: auto;
 height: 100%;}
+.imagem {
+    width: 50vw;
+}
 
-/*segunda seção --------------------*/
+/*SEGUNDA SEÇÃO --------------------*/
 .sec-two {background-image: url(about.png);
     background-size: cover;
     width: 100vw;
@@ -95,14 +107,15 @@ h3 {
     font-size: 70px;
     color: #fea837;
 }
+/*fiz essa seção ocupar a tela inteira usando o VH VW, coloquei uma imagem, alinhei as duas divs usando > */
 
-/*terceira seção --------------------*/
+/*TERCEIRO SEÇÃO --------------------*/
 .sec-three {background-color: #352f4c;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 .sec-three > div {
@@ -122,6 +135,9 @@ ul {
     color: #fdfffc;
     list-style: none;
 }
+/*utilizei flex box para alinhar de novo as divs em sentido horizontal, alinhei os textos usando text-align: center, coloquei background em uma div só para "ilustrar" o assunto e utilizei uma lista para os interesses.*/
+
+/*QUARTA SEÇÃO --------------------*/
 label {
     font-size: 20px;
     color: #fdfffc;
@@ -142,7 +158,6 @@ fieldset {
     gap: 10px;
     padding-bottom: 10%;
 }
-/*quarta seção --------------------*/
 .sec-four {
     height: 90vh;
     width: 100vw;
@@ -158,6 +173,8 @@ fieldset {
     font-size 20px;
     color: #011627;
 }
+/*adicionei um textareaao inves de um input por ser maior e coloquei um label pra todos pra conseguir fazer um link entre cada input e suas legendas, também usei display flex para centralizar tudo. tirei o fundo dos inputs e coloquei borda e um padding para o texto não ficar muito perto da borda*/
+
 /*footer ---------------*/
 footer {
     height: 10vh;
@@ -168,3 +185,35 @@ footer {
     width: 70%;
     text-align: center;
 }
+@media screen and (max-width: 900px) {
+    h2 {
+        font-size: 50px;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 22px;
+    }
+    ul {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .sec-one {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .first-div {
+        padding-top: 10%;
+        padding-left: 5px;
+        height: 40%;
+        width: 60%;
+    }
+    .foto {width: 50vw;
+        height: auto;
+    align-self: flex-end;}
+        
+}
+/*Comecei uma tentativa de arrumar ajustando media pra responsividade, mas não deu muito certo então mesmo com a entrega, eu provavelmente vou continuar mexendo nela após as correções e tudo*/
